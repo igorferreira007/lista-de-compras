@@ -1,0 +1,56 @@
+li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--background-secondary);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+    position: relative;
+
+    & input[type="checkbox"] {
+      all: unset;
+      inset: 0;
+      position: absolute;
+    }
+
+    &:has(:focus), &:has(:hover) {
+      & span {
+        background: url(../assets/checkbox-hover.svg) no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &:has(:checked) {
+      & span {
+        background: url(../assets/checkbox-selected.svg) no-repeat;
+        background-size: cover;
+      }
+    }
+
+    & span {
+      display: inline-block;
+      background: url(../assets/checkbox-default.svg) no-repeat;
+      background-size: cover;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    & label {
+      font: var(--paragraph);
+      color: var(--content-secondary);
+    }
+  }
+
+  & > button {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: grid;
+    place-content: center;
+  }
+}

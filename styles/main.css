@@ -1,0 +1,63 @@
+main {
+  max-width: 62.8rem;
+  width: 100%;
+  margin-inline: auto;
+  padding-top: 3.2rem;
+  
+  padding-inline: 3.2rem;
+
+  position: relative;
+
+  & > a {
+    font: var(--link);
+    color: var(--color-brand);
+  }
+
+  & h1 {
+    font: var(--title);
+    color: var(--content-primary);
+    margin-top: 1.6rem;
+  }
+
+  & form {
+    display: grid;
+    gap: 1.6rem;
+    margin-top: 4.4rem;
+  }
+
+  & ul {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    overflow-y: auto;
+    height: 53vh;
+    padding-right: .8rem;
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 1rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--content-tertiary);
+      border-radius: 20px;
+    }
+
+    & li {
+      height: fit-content;
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  main {
+    padding-top: 6.4rem;
+    padding-inline: 0;
+
+    & form {
+      display: flex;
+    }
+  }
+}

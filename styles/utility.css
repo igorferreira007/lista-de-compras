@@ -1,0 +1,17 @@
+.desktop-only {
+  display: none;
+}
+
+.display-flex {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  pointer-events: auto !important;
+
+  transition: opacity 1s ease, transform 1s ease !important;
+}
+
+@media (width >= 1200px) {
+  .desktop-only {
+    display: initial;
+  }
+}

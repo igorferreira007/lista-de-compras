@@ -1,0 +1,29 @@
+div.warning {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-danger);
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  margin-top: 3.6rem;
+  width: calc(100% - 6.4rem);
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s, transform 1s;
+  pointer-events: none;
+
+  position: absolute;
+  bottom: 0;
+
+  & span {
+    font: var(--label);
+    color: var(--always-white);
+  }
+}
+
+@media (width >= 1200px) {
+  div.warning {
+    width: 100%;
+  }
+}

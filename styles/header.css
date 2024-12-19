@@ -1,0 +1,8 @@
+@media (width >= 1200px) {
+  header.desktop-only {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.4rem;
+  }
+}
